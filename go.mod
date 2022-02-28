@@ -1,4 +1,4 @@
-module RESTAPISample
+module github.com/alvisyahri97/rest-sample
 
 go 1.17
 

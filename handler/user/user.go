@@ -1,6 +1,6 @@
 package user
 
-import "RESTAPISample/repo/users"
+import "github.com/alvisyahri97/rest-sample/repo/users"
 
 type UserRepo interface {
 	GetByID(id int) (users.User, error)

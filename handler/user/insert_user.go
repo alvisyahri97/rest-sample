@@ -1,11 +1,12 @@
 package user
 
 import (
-	"RESTAPISample/repo/users"
 	"encoding/json"
 	"encoding/xml"
 	"errors"
 	"net/http"
+
+	"github.com/alvisyahri97/rest-sample/repo/users"
 
 	"github.com/go-http-utils/headers"
 )

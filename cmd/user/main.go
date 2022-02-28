@@ -1,10 +1,11 @@
 package main
 
 import (
-	"RESTAPISample/handler/user"
-	"RESTAPISample/repo/users"
 	"log"
 	"net/http"
+
+	"github.com/alvisyahri97/rest-sample/handler/user"
+	"github.com/alvisyahri97/rest-sample/repo/users"
 
 	"github.com/go-chi/chi"
 )

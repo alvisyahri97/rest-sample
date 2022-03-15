@@ -3,7 +3,6 @@ package user
 import (
 	"encoding/json"
 	"encoding/xml"
-	"errors"
 	"net/http"
 
 	"github.com/go-http-utils/headers"
@@ -37,7 +36,8 @@ func ParseResp(w http.ResponseWriter, r *http.Request, data interface{}, httpSta
 		resp, _ = xml.Marshal(data)
 		w.Header().Add(headers.ContentType, "application/xml")
 	default:
-		WriteErrResp(w, r, http.StatusNotAcceptable, errors.New("request not acceptable"))
+		http.Error(w, "request not acceptable", http.StatusNotAcceptable)
+		return
 	}
 
 	w.WriteHeader(httpStatus)
